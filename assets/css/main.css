@@ -21,8 +21,10 @@ a {
 /* Global CSS */
 /* -------------------------------------------------------------- */
 body {
+  height: 100vh;
   font-family: "Poppins", sans-serif;
   background: url("../img/bg.svg") no-repeat center center/cover;
+  background-attachment: fixed;
 }
 
 .container {
@@ -64,8 +66,9 @@ aside p {
 }
 
 main {
-  height: 100vh;
   padding: 80px 100px 20px 100px;
+  overflow: scroll;
+  overflow: hidden;
 }
 
 footer {
@@ -83,6 +86,50 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 300px;
+}
+.countries::-webkit-scrollbar{
+  display: none;
+}
+.countries{
+  overflow: hidden;
+  gap: 1rem;
+  display: flex;
+  list-style: none;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.countries li{
+  margin: 2rem;
+  height: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  height: 200px;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 1vw;
+    display: grid;
+    place-items: center;
+}
+
+.countries li a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 1vw;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: transparent;
+}
+
+.countries li a:hover{
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
 }
 
 .card {
@@ -113,6 +160,18 @@ footer {
   font-size: 6vw;
   font-weight: 800;
   margin: 3rem 0;
+}
+
+.continent-subtitle{
+  background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,0) 0%, rgba(65,169,255,0) 48%, rgba(38,151,255,1) 49%, rgba(235,0,255,1) 51%, rgba(235,0,255,0) 52%, rgba(235,212,255,0) 100%);
+}
+.continent-subtitle h3{
+  /* position: absolute; */
+  background: #ffffff;
+  border-radius: 5rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
 }
 
 /* Media Queries */
